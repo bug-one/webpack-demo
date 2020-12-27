@@ -1,3 +1,9 @@
+@font-face{
+    font-family: 'mini'; 
+    src: url('./mini.ttf');
+
+}
 .box{
     color: red;
+    font-family: mini;
 }
