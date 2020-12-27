@@ -10,6 +10,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
     },
+    devtool: 'source-map',
     plugins: [
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
