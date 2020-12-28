@@ -5,7 +5,6 @@ import './index.less'
 import './index.scss'
 import yuanshen from './images/yuanshen.png'
 
-const a = b
 
 const box = document.querySelector('.box')
 box.innerHTML += `

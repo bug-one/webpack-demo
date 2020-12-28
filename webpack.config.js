@@ -11,6 +11,10 @@ module.exports = {
     filename: 'main.js'
     },
     devtool: 'source-map',
+    devServer: {
+        contentBase: './dist',
+        port: 8888
+      },
     plugins: [
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
