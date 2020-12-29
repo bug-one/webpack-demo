@@ -1,10 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
       path: path.resolve(__dirname, '../dist'),
     filename: 'main.js'
@@ -14,6 +15,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template:'./public/index.html'
         }),
+        new VueLoaderPlugin()
     ],
     module: {
         rules: [
@@ -76,7 +78,11 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+              }
         ]
     }
         
